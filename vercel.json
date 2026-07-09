@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "runtime": "nodejs24.x",
   "functions": {
     "api/**/*.ts": {
       "maxDuration": 30,
