@@ -1,5 +1,6 @@
 ![Status Badge](https://readme-api-dn7a.vercel.app/api/render-v2?type=badge&content=%7B%22text%22%3A%22Live%22%2C%22color%22%3A%22%2328a745%22%7D)
-
+![Dashboard](https://readme-api-dn7a.vercel.app
+/api/render?type=component&component=dashboard&data=%7B%22title%22%3A%22Overview%22%2C%22cards%22%3A%5B%7B%22title%22%3A%22Users%22%2C%22value%22%3A%221%2C234%22%2C%22color%22%3A%22%230366d6%22%7D%5D%7D)
 <<<<<<< HEAD
 # API
 =======
