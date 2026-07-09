@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "runtime": "nodejs20.x",
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  },
+  "env": {
+    "MAX_CONTENT_LENGTH": "50000",
+    "MAX_SVG_WIDTH": "1200",
+    "MAX_SVG_HEIGHT": "3000"
+  },
+  "headers": [
+    {
+      "source": "/api/render",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, immutable"
+        },
+        {
+          "key": "Content-Type",
+          "value": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}
