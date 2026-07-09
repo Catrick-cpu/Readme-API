@@ -77,12 +77,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Initialize renderers on first request
   initializeRenderers();
 
-  // Only accept GET requests
-  if (req.method !== 'GET') {
-    res.status(405).send(createErrorSvg('Method Not Allowed', 'Only GET requests are supported'));
-    return;
-  }
-
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -91,6 +85,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Handle OPTIONS (CORS preflight)
   if (req.method === 'OPTIONS') {
     res.status(200).end();
+    return;
+  }
+
+  // Only accept GET requests
+  if (req.method !== 'GET') {
+    res.status(405).send(createErrorSvg('Method Not Allowed', 'Only GET requests are supported'));
     return;
   }
 

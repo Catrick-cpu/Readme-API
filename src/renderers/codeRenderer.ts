@@ -1,6 +1,7 @@
 import {BaseRenderer, RenderInput, RenderOutput} from '../core/rendererInterface';
 import {SVGBuilder} from '../core/svgBuilder';
-import {highlightCode, getLanguageInfo, validateLanguage} from '../parsers/code';
+import {highlightCode, getLanguageInfo} from '../parsers/code';
+import {validateLanguage} from '../utils/validation';
 
 /**
  * Code renderer - syntax highlighted code blocks

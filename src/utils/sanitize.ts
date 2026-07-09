@@ -28,22 +28,16 @@ const ALLOWED_ATTRIBUTES: {[key: string]: string[]} = {
 };
 
 export function sanitizeHtmlContent(html: string): string {
-  return sanitizeHtml(html, {
+  // First pass: remove javascript: protocol and event handlers
+  let cleaned = html
+    .replace(/javascript:/gi, '')
+    .replace(/on\w+\s*=/gi, ''); // Remove event handler attributes
+
+  return sanitizeHtml(cleaned, {
     allowedTags: ALLOWED_TAGS,
     allowedAttributes: ALLOWED_ATTRIBUTES,
     allowedSchemes: ['http', 'https', 'mailto'],
     disallowedTagsMode: 'discard',
-    onTagAttr: (tag, name, value) => {
-      // Block event handlers
-      if (name.startsWith('on')) {
-        return false;
-      }
-      // Block javascript: protocol
-      if (name === 'href' && value.startsWith('javascript:')) {
-        return false;
-      }
-      return true;
-    },
   });
 }
 
