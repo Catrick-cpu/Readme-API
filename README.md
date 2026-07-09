@@ -1,4 +1,4 @@
-![HTML Preview](https://https://readme-api-dn7a.vercel.app//api/render?type=html&content=%3Ch1%3EHello%20World%3C/h1%3E%3Cp%3EThis%20is%20a%20preview%3C/p%3E)
+![Status Badge](https://readme-api-dn7a.vercel.app/api/render-v2?type=badge&content=%7B%22text%22%3A%22Live%22%2C%22color%22%3A%22%2328a745%22%7D)
 
 <<<<<<< HEAD
 # API
