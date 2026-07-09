@@ -1,3 +1,5 @@
+![HTML Preview](https://your-project.vercel.app/api/render?type=html&content=%3Ch1%3EHello%20World%3C/h1%3E%3Cp%3EThis%20is%20a%20preview%3C/p%3E)
+
 <<<<<<< HEAD
 # API
 =======
